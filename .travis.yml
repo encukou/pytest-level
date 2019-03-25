@@ -7,4 +7,4 @@ python:
 install:
   - python -m pip install .
 script:
-  - python -m pytest
+  - python -m pytest -v
