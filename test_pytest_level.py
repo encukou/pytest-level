@@ -17,7 +17,6 @@ def run_pytest(tmp_path):
         filename.write_text(textwrap.dedent(test_file_content))
         args = [sys.executable, '-m', 'pytest', filename, *args]
         kwargs['check'] = True
-        kwargs.setdefault('env', {})['PYTEST_PLUGINS'] = 'pytest_level'
         if should_fail:
             with pytest.raises(subprocess.CalledProcessError):
                 subprocess.run(args, **kwargs)
