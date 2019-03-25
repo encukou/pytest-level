@@ -3,10 +3,11 @@ from setuptools import setup
 
 setup(
     name="pytest-level",
-    version='0.1',
+    version='0.1.1',
     py_modules=["pytest_level"],
     description='Select tests of a given level or lower',
     long_description=pathlib.Path('README.md').read_text(),
+    long_description_content_type="text/markdown",
     author='Petr Viktorin',
     author_email='encukou@gmail.com',
     license='MIT',
