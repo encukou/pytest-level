@@ -17,5 +17,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
     ],
+    setup_requires=['pytest'],
     zip_safe=False,
 )
