@@ -28,4 +28,4 @@ def pytest_collection_modifyitems(session, config, items):
                 deselected_items.add(item)
     selected_items = [item for item in items if item not in deselected_items]
     items[:] = selected_items
-    config.hook.pytest_deselected(items=deselected_items)
+    config.hook.pytest_deselected(items=list(deselected_items))
