@@ -20,6 +20,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    setup_requires=['pytest'],
+    install_requires=['pytest'],
     zip_safe=False,
 )
