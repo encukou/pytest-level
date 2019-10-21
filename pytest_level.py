@@ -1,5 +1,11 @@
 import pytest
 
+def pytest_configure(config):
+    config.addinivalue_line(
+        "markers",
+        "level(lvl): Don't run the test if `lvl` is higher than current --level."
+    )
+
 def pytest_addoption(parser):
     parser.addoption('--level', type=int)
 

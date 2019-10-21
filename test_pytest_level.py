@@ -102,3 +102,12 @@ def test_selects_given(run_pytest):
 def test_selects_previous(run_pytest):
     """Test with lower levels are selected"""
     run_pytest(TEST_FILE_CONTENT, '--level', '5', should_fail=True)
+
+@pytest.mark.level(0)
+def test_marker():
+    """Test with a marker.
+
+    This should detect non-fatal issues (warnings) with the level marker.
+    It doesn't actually test anything.
+    """
+    pass
